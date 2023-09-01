@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.csss">
+  
+  <title>Frontend Mentor | Job Listings</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700&family=League+Spartan:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <header>
+  </header>
+  <div class="container-busca">
+    <div class="barraDeBuscar" id="buscar">
+      <p id="iconFrontend"  onclick="excluir()">Front end</p>
+      <p id="iconJunior"  onclick="excluir()">Junior</p>
+      <p id="iconJs"  onclick="excluir()">JavaScript</p>
+      <p id="iconVue"  onclick="excluir()">Vue</p>
+      <p id="iconSass"  onclick="excluir()">Sass</p>
+      <p id="iconCss"  onclick="excluir()">Css</p>
+      <p id="iconSenior"  onclick="excluir()">Senior</p>
+      <p id="iconHTML"  onclick="excluir()">HTML</p>
+      <p id="iconReact"  onclick="excluir()">React</p>
+      <p id="iconRuby"  onclick="excluir()">Ruby</p>
+      <p id="iconMidweight"  onclick="excluir()">Midweight</p>
+      <p id="iconFullstack"  onclick="excluir()">Fullstack</p>
+      <p id="iconRuby"  onclick="excluir()">Ruby</p>
+      <p id="iconDjango"  onclick="excluir()">Django</p>
+      <p id="iconPython"  onclick="excluir()">Python</p>
+      <p id="iconRoR"  onclick="excluir()">RoR</p>
+      <p id="iconBackend"  onclick="excluir()">Backend</p>
+
+    </div>
+    <div  id="icon1" class="lupa1" onclick="expandir()"> </div>
+    <div  id="icon2" class="lupa2" onclick="conprimir()"> </div>
+  </div>
+  <div class="container" >
+    <img src="./images/photosnap.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">Photosnap</p>
+          <p class="new">NEW!</p>
+          <p class="featured">FEATURED</p>
+        </div>
+        <h3>Senior Frontend Developer</h3>
+        <p> 1d ago   .   Full Time   .   USA only </p>
+      </div>
+      <div class="Specialization">
+        <p class="Frontend" onclick="selectFrontend()">Frontend</p>
+        <p class="Senior" onclick="selectSenior()">Senior</p>
+        <p class="HTML" onclick="selectHTML()">HTML</p>
+        <p class="Css" onclick="selectCss()">CSS</p>
+        <p class="Js" onclick="selectJs()">JavaScript</p>
+      </div>
+    </div>
+  </div>
+  <div id="Photosnap" class="container">
+    <img src="./images/manage.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">Manage</p>
+          <p class="new">NEW!</p>
+          <p class="featured">FEATURED</p>
+        </div>
+        <h3>Fullstack Developer</h3>
+        <p> 1d ago   .   Part Time   .   Remote</p>
+      </div>
+      <div class="Specialization">
+        <p class="Fullstack" onclick="selectFullstack()">Fullstack</p>
+        <p class="Midweight" onclick="selectMidweight()">Midweight</p>
+        <p class="Python" onclick="selectPython()">Python</p>
+        <p class="React" onclick="selectReact()">React</p>
+      </div>
+    </div>
+  </div>  
+  <div class="container">
+    <img src="./images/account.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">Account</p>
+          <p class="new">NEW!</p>
+        </div>
+        <h3>Junior Frontend Developer</h3>
+        <p> 2d ago   .   Part Time   .   USA only </p>
+      </div>
+      <div class="Specialization">
+        <p class="Frontend" onclick="selectFrontend()">Frontend</p>
+        <p class="Junior" onclick="selectJunior()">Junior</p>
+        <p class="React" onclick="selectReact()">React</p>
+        <p class="Sass" onclick="selectSass()">Sass</p>
+        <p class="Js" onclick="selectJs()">JavaScript</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <img src="./images/myhome.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">MyHome</p>
+        </div>
+        <h3>  Junior Frontend Developer </h3>
+        <p> 5d ago   .   Contract   .   USA only </p>
+      </div>
+      <div class="Specialization">
+        <p class="Frontend" onclick="selectFrontend()">Frontend</p>
+        <p class="Junior" onclick="selectJunior()">Junior</p>
+        <p class="Css" onclick="selectCss()">CSS</p>
+        <p class="Js" onclick="selectJs()">JavaScript</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" data-specialization="Fullstack">
+    <img src="./images/loop-studios.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">Loop Studios</p>
+        </div>
+        <h3>Software Engineer</h3>
+        <p> 1d ago   .   Full Time   .   Worldwide </p>
+      </div>
+      <div class="Specialization">
+        <p class="Fullstack" onclick="selectFullstack()">Fullstack</p>
+        <p class="Midweight" onclick="selectMidweight()">Midweight</p>
+        <p class="Js" onclick="selectJs()">JavaScript</p>
+        <p class="Ruby" onclick="selectRuby()">Ruby</p>
+        <p class="Sass" onclick="selectSass()">Sass</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <img src="./images/faceit.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">FaceIt</p>
+        </div>
+        <h3>Junior Backend Developer</h3>
+        <p> 2w ago   .   Full Time   .   UK only </p>
+      </div>
+      <div class="Specialization">
+        <p class="Backend" onclick="selectBackend()">Backend</p>
+        <p class="Junior" onclick="selectJunior()">Junior</p>
+        <p class="Ruby" onclick="selectRuby()">Ruby</p>
+        <p class="RoR" onclick="selectRoR()">RoR</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <img src="./images/shortly.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">Shortly</p>
+        </div>
+        <h3>Junior Developer</h3>
+        <p> 2w ago   .   Full Time   .   onWorldwidely </p>
+      </div>
+      <div class="Specialization">
+        <p class="Frontend" onclick="selectFrontend()">Frontend</p>
+        <p class="Junior" onclick="selectJunior()">Junior</p>
+        <p class="HTML" onclick="selectHTML()">HTML</p>
+        <p class="Js" onclick="selectJs()">JavaScript</p>
+        <p class="Sass" onclick="selectSass()">Sass</p>
+      </div>
+    </div>
+  </div>  
+  <div class="container">
+    <img src="./images/insure.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">Insure</p>
+        </div>
+        <h3> Junior Frontend Developer</h3>
+        <p> 2w ago   .   Full Time   .   USA only </p>
+      </div>
+      <div class="Specialization">
+        <p class="Frontend" onclick="selectFrontend()">Frontend</p>
+        <p class="Junior" onclick="selectJunior()">Junior</p>
+        <p class="Js" onclick="selectJs()">JavaScript</p>
+        <p class="Vue" onclick="selectVue()">Vue</p>
+        <p class="Sass" onclick="selectSass()">Sass</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <img src="./images/eyecam-co.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">Eyecam Co.</p>
+        </div>
+        <h3>Full Stack Engineer</h3>
+        <p> 3w ago   .   Full Time   .   Worldwide </p>
+      </div>
+      <div class="Specialization">
+        <p class="Fullstack" onclick="selectFullstack()">Fullstack</p>
+        <p class="Midweight" onclick="selectMidweight()">Midweight</p>
+        <p class="Js" onclick="selectJs()">JavaScript</p>
+        <p class="Python" onclick="selectPython()">Python</p>
+        <p class="Django" onclick="selectDjango()">Django</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <img src="./images/the-air-filter-company.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">The Air Filter Company</p>
+        </div>
+        <h3>Front-end Dev</h3>
+        <p> 1mo ago   .   Part Time   .   Worldwide </p>
+      </div>
+      <div class="Specialization">
+        <p class="Frontend" onclick="selectFrontend()">Frontend</p>
+        <p class="Junior" onclick="selectJunior()">Junior</p>
+        <p class="Js" onclick="selectJs()">JavaScript</p>
+        <p class="React" onclick="selectReact()">React</p>
+        <p class="Sass" onclick="selectSass()">Sass</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+     var icon1 = document.getElementById('icon1')
+     var icon2 = document.getElementById('icon2')
+     var buscar = document.getElementById('buscar')
+
+    function expandir() {
+      buscar.style.width ="70%";
+      buscar.style.transition = "0.4s";
+      icon1.style.display = "none";
+      icon2.style.display = "block";
+    }
+    function conprimir() {
+      containers.forEach(container => {
+      buscar.style.width ="1px";
+      icon1.style.display = "block";
+      icon2.style.display = "none";
+      barraJs.style.display = "none"
+      barraBackend.style.display = "none"
+      barraCss.style.display = "none"
+      barraDjango.style.display = "none"
+      barraFrontend.style.display = "none"
+      barraFullstack.style.display = "none"
+      barraHTML.style.display = "none"
+      barraJunior.style.display = "none"
+      barraRoR.style.display = "none"
+      barraReact.style.display = "none"
+      barraMidweight.style.display = "none"
+      barraRuby.style.display = "none"
+      barraSass.style.display = "none"
+      barraSenior.style.display = "none"
+      barraVue.style.display = "none"
+      barraPython.style.display = "none"
+      container.style.display = 'flex';
+    })
+  }
+
+    const elementosJs = document.querySelectorAll('.Js');
+    const containers = document.querySelectorAll('.container');
+    const barraJs = document.getElementById('iconJs');
+    function selectJs() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosJs.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraJs.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraJs.style.display = "block";
+          barraBackend.style.display = "none"
+          barraCss.style.display = "none"
+          barraDjango.style.display = "none"
+          barraFrontend.style.display = "none"
+          barraFullstack.style.display = "none"
+          barraHTML.style.display = "none"
+          barraJunior.style.display = "none"
+          barraRoR.style.display = "none"
+          barraReact.style.display = "none"
+          barraMidweight.style.display = "none"
+          barraRuby.style.display = "none"
+          barraSass.style.display = "none"
+          barraSenior.style.display = "none"
+          barraVue.style.display = "none"
+          barraPython.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+    const elementosCss = document.querySelectorAll('.Css');
+    const barraCss = document.getElementById('iconCss');
+    function selectCss() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosCss.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraCss.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraCss.style.display = "block";
+          barraJs.style.display = "none";
+          barraBackend.style.display = "none"
+          barraDjango.style.display = "none"
+          barraFrontend.style.display = "none"
+          barraFullstack.style.display = "none"
+          barraHTML.style.display = "none"
+          barraJunior.style.display = "none"
+          barraRoR.style.display = "none"
+          barraReact.style.display = "none"
+          barraMidweight.style.display = "none"
+          barraRuby.style.display = "none"
+          barraSass.style.display = "none"
+          barraSenior.style.display = "none"
+          barraVue.style.display = "none"
+          barraPython.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+    const elementosHTML = document.querySelectorAll('.HTML');
+    const barraHTML = document.getElementById('iconHTML');
+    function selectHTML() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosHTML.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraHTML.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraHTML.style.display = "block";
+          barraJs.style.display = "none";
+          barraBackend.style.display = "none"
+          barraCss.style.display = "none"
+          barraDjango.style.display = "none"
+          barraFrontend.style.display = "none"
+          barraFullstack.style.display = "none"
+          barraJunior.style.display = "none"
+          barraRoR.style.display = "none"
+          barraReact.style.display = "none"
+          barraMidweight.style.display = "none"
+          barraRuby.style.display = "none"
+          barraSass.style.display = "none"
+          barraSenior.style.display = "none"
+          barraVue.style.display = "none"
+          barraPython.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+    const elementosJunior = document.querySelectorAll('.Junior');
+    const barraJunior = document.getElementById('iconJunior');
+    function selectJunior() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosJunior.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraJunior.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraJunior.style.display = "block";
+          barraJs.style.display = "none";
+          barraBackend.style.display = "none"
+          barraCss.style.display = "none"
+          barraDjango.style.display = "none"
+          barraFrontend.style.display = "none"
+          barraFullstack.style.display = "none"
+          barraHTML.style.display = "none"
+          barraRoR.style.display = "none"
+          barraReact.style.display = "none"
+          barraMidweight.style.display = "none"
+          barraRuby.style.display = "none"
+          barraSass.style.display = "none"
+          barraSenior.style.display = "none"
+          barraVue.style.display = "none"
+          barraPython.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+    const elementosReact = document.querySelectorAll('.React');
+    const barraReact = document.getElementById('iconReact');
+    function selectReact() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosReact.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraReact.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraReact.style.display = "block";
+          barraJs.style.display = "none";
+          barraBackend.style.display = "none"
+          barraCss.style.display = "none"
+          barraDjango.style.display = "none"
+          barraFrontend.style.display = "none"
+          barraFullstack.style.display = "none"
+          barraHTML.style.display = "none"
+          barraJunior.style.display = "none"
+          barraRoR.style.display = "none"
+          barraMidweight.style.display = "none"
+          barraRuby.style.display = "none"
+          barraSass.style.display = "none"
+          barraSenior.style.display = "none"
+          barraVue.style.display = "none"
+          barraPython.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+    const elementosRuby = document.querySelectorAll('.Ruby');
+    const barraRuby = document.getElementById('iconRuby');
+    function selectRuby() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosRuby.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraRuby.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraRuby.style.display = "block";
+          barraJs.style.display = "none";
+          barraBackend.style.display = "none"
+          barraCss.style.display = "none"
+          barraDjango.style.display = "none"
+          barraFrontend.style.display = "none"
+          barraFullstack.style.display = "none"
+          barraHTML.style.display = "none"
+          barraJunior.style.display = "none"
+          barraRoR.style.display = "none"
+          barraReact.style.display = "none"
+          barraMidweight.style.display = "none"
+          barraSass.style.display = "none"
+          barraSenior.style.display = "none"
+          barraVue.style.display = "none"
+          barraPython.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+    const elementosSass = document.querySelectorAll('.Sass');
+    const barraSass = document.getElementById('iconSass');
+    function selectSass() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosSass.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraSass.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraSass.style.display = "block";
+          barraJs.style.display = "none";
+          barraBackend.style.display = "none"
+          barraCss.style.display = "none"
+          barraDjango.style.display = "none"
+          barraFrontend.style.display = "none"
+          barraFullstack.style.display = "none"
+          barraHTML.style.display = "none"
+          barraJunior.style.display = "none"
+          barraRoR.style.display = "none"
+          barraReact.style.display = "none"
+          barraMidweight.style.display = "none"
+          barraRuby.style.display = "none"
+          barraSenior.style.display = "none"
+          barraVue.style.display = "none"
+          barraPython.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+
+    const elementosBackend = document.querySelectorAll('.Backend');
+    const barraBackend = document.getElementById('iconBackend');
+    function selectBackend() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosBackend.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraBackend.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraBackend.style.display = "block";
+          barraJs.style.display = "none";
+          barraCss.style.display = "none"
+          barraDjango.style.display = "none"
+          barraFrontend.style.display = "none"
+          barraFullstack.style.display = "none"
+          barraHTML.style.display = "none"
+          barraJunior.style.display = "none"
+          barraRoR.style.display = "none"
+          barraReact.style.display = "none"
+          barraMidweight.style.display = "none"
+          barraRuby.style.display = "none"
+          barraSass.style.display = "none"
+          barraSenior.style.display = "none"
+          barraVue.style.display = "none"
+          barraPython.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+    const elementosFrontend = document.querySelectorAll('.Frontend');
+    const barraFrontend = document.getElementById('iconFrontend');
+    function selectFrontend() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosFrontend.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraFrontend.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraFrontend.style.display = "block";
+          barraJs.style.display = "none";
+          barraBackend.style.display = "none"
+          barraCss.style.display = "none"
+          barraDjango.style.display = "none"
+          barraFullstack.style.display = "none"
+          barraHTML.style.display = "none"
+          barraJunior.style.display = "none"
+          barraRoR.style.display = "none"
+          barraReact.style.display = "none"
+          barraMidweight.style.display = "none"
+          barraRuby.style.display = "none"
+          barraSass.style.display = "none"
+          barraSenior.style.display = "none"
+          barraVue.style.display = "none"
+          barraPython.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+    const elementosVue = document.querySelectorAll('.Vue');
+    const barraVue = document.getElementById('iconVue');
+    function selectVue() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosVue.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraVue.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraVue.style.display = "block";
+          barraJs.style.display = "none";
+          barraBackend.style.display = "none"
+          barraCss.style.display = "none"
+          barraDjango.style.display = "none"
+          barraFrontend.style.display = "none"
+          barraFullstack.style.display = "none"
+          barraHTML.style.display = "none"
+          barraJunior.style.display = "none"
+          barraRoR.style.display = "none"
+          barraReact.style.display = "none"
+          barraMidweight.style.display = "none"
+          barraRuby.style.display = "none"
+          barraSass.style.display = "none"
+          barraSenior.style.display = "none"
+          barraPython.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+    const elementosSenior = document.querySelectorAll('.Senior');
+    const barraSenior = document.getElementById('iconSenior');
+    function selectSenior() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosSenior.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraSenior.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraSenior.style.display = "block";
+          barraJs.style.display = "none";
+          barraBackend.style.display = "none"
+          barraCss.style.display = "none"
+          barraDjango.style.display = "none"
+          barraFrontend.style.display = "none"
+          barraFullstack.style.display = "none"
+          barraHTML.style.display = "none"
+          barraJunior.style.display = "none"
+          barraRoR.style.display = "none"
+          barraReact.style.display = "none"
+          barraMidweight.style.display = "none"
+          barraRuby.style.display = "none"
+          barraSass.style.display = "none"
+          barraVue.style.display = "none"
+          barraPython.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+    const elementosFullstack = document.querySelectorAll('.Fullstack');
+    const barraFullstack = document.getElementById('iconFullstack');
+    function selectFullstack() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosFullstack.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraFullstack.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraFullstack.style.display = "block";
+          barraJs.style.display = "none";
+          barraBackend.style.display = "none"
+          barraCss.style.display = "none"
+          barraDjango.style.display = "none"
+          barraFrontend.style.display = "none"
+          barraHTML.style.display = "none"
+          barraJunior.style.display = "none"
+          barraRoR.style.display = "none"
+          barraReact.style.display = "none"
+          barraMidweight.style.display = "none"
+          barraRuby.style.display = "none"
+          barraSass.style.display = "none"
+          barraSenior.style.display = "none"
+          barraVue.style.display = "none"
+          barraPython.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+    const elementosMidweight = document.querySelectorAll('.Midweight');
+    const barraMidweight = document.getElementById('iconMidweight');
+    function selectMidweight() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosMidweight.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraMidweight.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraMidweight.style.display = "block";
+          barraJs.style.display = "none";
+          barraBackend.style.display = "none"
+          barraCss.style.display = "none"
+          barraDjango.style.display = "none"
+          barraFrontend.style.display = "none"
+          barraFullstack.style.display = "none"
+          barraHTML.style.display = "none"
+          barraJunior.style.display = "none"
+          barraRoR.style.display = "none"
+          barraReact.style.display = "none"
+          barraRuby.style.display = "none"
+          barraSass.style.display = "none"
+          barraSenior.style.display = "none"
+          barraVue.style.display = "none"
+          barraPython.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+    const elementosRoR= document.querySelectorAll('.RoR');
+    const barraRoR = document.getElementById('iconRoR');
+    function selectRoR() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosRoR.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraRoR.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraRoR.style.display = "block";
+          barraJs.style.display = "none";
+          barraBackend.style.display = "none"
+          barraCss.style.display = "none"
+          barraDjango.style.display = "none"
+          barraFrontend.style.display = "none"
+          barraFullstack.style.display = "none"
+          barraHTML.style.display = "none"
+          barraJunior.style.display = "none"
+          barraReact.style.display = "none"
+          barraMidweight.style.display = "none"
+          barraRuby.style.display = "none"
+          barraSass.style.display = "none"
+          barraSenior.style.display = "none"
+          barraVue.style.display = "none"
+          barraPython.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+    const elementosDjango = document.querySelectorAll('.Django');
+    const barraDjango = document.getElementById('iconDjango');
+    function selectDjango() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosDjango.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraDjango.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraDjango.style.display = "block";
+          barraJs.style.display = "none";
+          barraBackend.style.display = "none"
+          barraCss.style.display = "none"
+          barraFrontend.style.display = "none"
+          barraFullstack.style.display = "none"
+          barraHTML.style.display = "none"
+          barraJunior.style.display = "none"
+          barraRoR.style.display = "none"
+          barraReact.style.display = "none"
+          barraMidweight.style.display = "none"
+          barraRuby.style.display = "none"
+          barraSass.style.display = "none"
+          barraSenior.style.display = "none"
+          barraVue.style.display = "none"
+          barraPython.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+    const elementosPython = document.querySelectorAll('.Python');
+    const barraPython = document.getElementById('iconPython');
+    function selectPython() {
+      containers.forEach(container => {
+        let contemElemento = false;
+        elementosPython.forEach(elemento => {
+          if (container.contains(elemento)) {
+            contemElemento = true;
+          }
+        });
+    
+        if (contemElemento) {
+          container.style.display = 'flex';
+          barraPython.style.display = "block";
+          buscar.style.width ="70%";
+          buscar.style.transition = "0.4s";
+        } else {
+          container.style.display = 'none';
+          barraPython.style.display = "block";
+          barraJs.style.display = "none";
+          barraBackend.style.display = "none"
+          barraCss.style.display = "none"
+          barraDjango.style.display = "none"
+          barraFrontend.style.display = "none"
+          barraFullstack.style.display = "none"
+          barraHTML.style.display = "none"
+          barraJunior.style.display = "none"
+          barraRoR.style.display = "none"
+          barraReact.style.display = "none"
+          barraMidweight.style.display = "none"
+          barraRuby.style.display = "none"
+          barraSass.style.display = "none"
+          barraSenior.style.display = "none"
+          barraVue.style.display = "none"
+          buscar.style.width ="70%";
+        }
+      });
+    };
+
+  </script>
+</body>
+</html>

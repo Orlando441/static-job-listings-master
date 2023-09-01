@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.csss">
+  
+  <title>Frontend Mentor | Job Listings</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700&family=League+Spartan:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <header>
+  </header>
+  <div class="container-busca">
+    <div class="barraDeBuscar" id="buscar">
+      <p id="iconFt" onclick="excluir()">Frontend</p>
+      <p id="iconJn" onclick="excluir()">Junior</p>
+      <p id="iconJs" onclick="excluir()">JavaScript</p>
+      <p id="iconV" onclick="excluir()">Vue</p>
+      <p id="iconS" onclick="excluir()">Sass</p>
+    </div>
+    <div  id="icon1" class="lupa1" onclick="expandir()"> </div>
+    <div  id="icon2" class="lupa2" onclick="conprimir()"> </div>
+  </div>
+  <div id="elementoPai" class="container"
+   data-specialization="Fullstack"
+   data-specialization="Frontend"
+   >
+    <img src="./images/photosnap.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">Photosnap</p>
+          <p class="new">NEW!</p>
+          <p class="featured">FEATURED</p>
+        </div>
+        <h3>Senior Frontend Developer</h3>
+        <p> 1d ago   .   Full Time   .   USA only </p>
+      </div>
+      <div class="Specialization">
+        <p onclick="select()">Frontend</p>
+        <p onclick="select()">Senior</p>
+        <p onclick="select()">HTML</p>
+        <p onclick="select()">CSS</p>
+        <p onclick="selectJs()">JavaScript</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <img src="./images/manage.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">Manage</p>
+          <p class="new">NEW!</p>
+          <p class="featured">FEATURED</p>
+        </div>
+        <h3>Fullstack Developer</h3>
+        <p> 1d ago   .   Part Time   .   Remote</p>
+      </div>
+      <div class="Specialization">
+        <p onclick="select()">Fullstack</p>
+        <p onclick="select()">Midweight</p>
+        <p onclick="select()">Python</p>
+        <p onclick="select()">React</p>
+      </div>
+    </div>
+  </div>  
+  <div class="container">
+    <img src="./images/account.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">Account</p>
+          <p class="new">NEW!</p>
+        </div>
+        <h3>Junior Frontend Developer</h3>
+        <p> 2d ago   .   Part Time   .   USA only </p>
+      </div>
+      <div class="Specialization">
+        <p onclick="select()">Frontend</p>
+        <p onclick="select()">Junior</p>
+        <p onclick="select()">React</p>
+        <p onclick="select()">Sass</p>
+        <p>JavaScript</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <img src="./images/myhome.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">MyHome</p>
+        </div>
+        <h3>  Junior Frontend Developer </h3>
+        <p> 5d ago   .   Contract   .   USA only </p>
+      </div>
+      <div class="Specialization">
+        <p onclick="select()">Frontend</p>
+        <p onclick="select()">Junior</p>
+        <p onclick="select()">CSS</p>
+        <p onclick="select()">JavaScript</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" data-specialization="Fullstack">
+    <img src="./images/loop-studios.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">Loop Studios</p>
+        </div>
+        <h3>Software Engineer</h3>
+        <p> 1d ago   .   Full Time   .   Worldwide </p>
+      </div>
+      <div class="Specialization">
+        <p onclick="select()">Fullstack</p>
+        <p onclick="select()">Midweight</p>
+        <p onclick="select()">JavaScript</p>
+        <p onclick="select()">Ruby</p>
+        <p>Sass</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <img src="./images/faceit.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">FaceIt</p>
+        </div>
+        <h3>Junior Backend Developer</h3>
+        <p> 2w ago   .   Full Time   .   UK only </p>
+      </div>
+      <div class="Specialization">
+        <p onclick="select()">UK only</p>
+        <p onclick="select()">Backend</p>
+        <p onclick="select()">Junior</p>
+        <p onclick="select()">Ruby</p>
+        <p>RoR</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <img src="./images/shortly.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">Shortly</p>
+        </div>
+        <h3>Junior Developer</h3>
+        <p> 2w ago   .   Full Time   .   onWorldwidely </p>
+      </div>
+      <div class="Specialization">
+        <p onclick="select()">Frontend</p>
+        <p onclick="select()">Junior</p>
+        <p onclick="select()">HTML</p>
+        <p onclick="select()">JavaScript</p>
+        <p>Sass</p>
+      </div>
+    </div>
+  </div>  
+  <div class="container">
+    <img src="./images/insure.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">Insure</p>
+        </div>
+        <h3> Junior Frontend Developer</h3>
+        <p> 2w ago   .   Full Time   .   USA only </p>
+      </div>
+      <div class="Specialization">
+        <p onclick="select()">Frontend</p>
+        <p onclick="select()">Junior</p>
+        <p onclick="select()">JavaScript</p>
+        <p onclick="select()">Vue</p>
+        <p onclick="select()">Sass</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <img src="./images/eyecam-co.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">Eyecam Co.</p>
+        </div>
+        <h3>Full Stack Engineer</h3>
+        <p> 3w ago   .   Full Time   .   Worldwide </p>
+      </div>
+      <div class="Specialization">
+        <p onclick="select()">Fullstack</p>
+        <p onclick="select()">Midweight</p>
+        <p onclick="select()">JavaScript</p>
+        <p onclick="select()">Python</p>
+        <p>Django</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <img src="./images/the-air-filter-company.svg" alt="">
+    <div class="content">
+      <div class="inf">
+        <div class="characteristics">
+          <p class="name">The Air Filter Company</p>
+        </div>
+        <h3>Front-end Dev</h3>
+        <p> 1mo ago   .   Part Time   .   Worldwide </p>
+      </div>
+      <div class="Specialization">
+        <p onclick="select()">Frontend</p>
+        <p onclick="select()">Junior</p>
+        <p onclick="select()" class="JavaScript">JavaScript</p>
+        <p onclick="select()">React</p>
+        <p>Sass</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+     var icon1 = document.getElementById('icon1')
+     var icon2 = document.getElementById('icon2')
+     var container = document.getElementsByClassName('container')
+     var buscar = document.getElementById('buscar')
+    function expandir() {
+      buscar.style.width ="70%";
+      buscar.style.transition = "0.4s";
+      icon1.style.display = "none";
+      icon2.style.display = "block";
+    }
+    var Js = document.getElementById('iconJs')
+    
+    const elementoPai = document.getElementById('elementoPai');
+    function selectJs() {
+      if (elementoPai.contains(Js) ) {
+      elementoPai.style.display = 'block';
+      Js.style.display = "block";
+      Js.style.transition = "0.2s"
+      buscar.style.width ="70%";
+      buscar.style.transition = "0.4s";
+    } else {
+      elementoPai.style.display = 'none';
+      Js.style.display = "block";
+      Js.style.transition = "0.2s"
+      buscar.style.width ="70%";
+      buscar.style.transition = "0.4s";
+    }
+    }
+    function conprimir() {
+      buscar.style.width ="1px";
+      icon1.style.display = "block";
+      icon2.style.display = "none";
+      Js.style.display = "none"
+    }
+
+    /*
+    function filterJobs() {
+      const containerMain = document.querySelector('.Specialization');
+      const elementoPai = document.getElementById('elementoPai');
+    if (elementoPai.contains(Js) ) {
+      elementoPai.style.display = 'block';
+    } else {
+      elementoPai.style.display = 'none';
+    }
+  }
+  */
+  </script>
+</body>
+</html>
